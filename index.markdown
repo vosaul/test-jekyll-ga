@@ -10,12 +10,4 @@ layout: home
 
 --------------------------------------
 
-    {% picture
-    hero assets/images/a1.jpg 35:10 center
-    phone: assets/images/a1.jpg 35:15 center
-    mobile: assets/images/a1.jpg 3:2 center
-    tablet: assets/images/a1.jpg 35:10 center
-    desktop: assets/images/a1.jpg 35:10 center
-    
-    --img class="hero_banner"
-    --alt page hero banner %}
+{% picture hero assets/images/a1.jpg 35:10 center phone: assets/images/a1.jpg 35:15 center mobile: assets/images/a1.jpg 3:2 center tablet: assets/images/a1.jpg 35:10 center desktop: assets/images/a1.jpg 35:10 center  --img class="hero_banner" --alt page hero banner %}
