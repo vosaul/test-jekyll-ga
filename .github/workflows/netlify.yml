@@ -26,13 +26,13 @@ jobs:
           bundle install
 
       - name: Create Build
-        run: bundle exec jekyll build -d _site
+        run: bundle exec jekyll build -d docs
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
         with:
-          name: _site
-          path: _site
+          name: docs
+          path: docs
 
   commit-build:
     needs: build
@@ -53,13 +53,13 @@ jobs:
       - name: Download website build
         uses: actions/download-artifact@v1
         with:
-          name: _site
-          path: _site
+          name: docs
+          path: docs
 
       - name: Commit and Push
         run: |
           if [ $(git status --porcelain=v1 2>/dev/null | wc -l) != "0" ] ; then
-            git add -f _site
+            git add -f docs
             git commit -m "gh-actions deployed a new website build"
             git push --force https://$@github.com/${GITHUB_REPOSITORY}.git HEAD:website-build
           fi
