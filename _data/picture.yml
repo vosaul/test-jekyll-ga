@@ -1,0 +1,40 @@
+media_queries:
+  phone: 'max-width: 599.8px'
+  mobile: 'min-width: 600px and max-width: 767px'
+  tablet: 'min-width: 768px and max-width: 899px'
+  laptop: 'min-width: 900px and max-width: 1439px'
+  desktop: 'min-width: 1440px'
+
+presets:
+  hero:
+    fallback_width: 1920
+    fallback_format: original
+    quality: 75
+    formats: [webp,original]
+    widths: [320, 500, 700, 900, 1440, 1920]
+    media_crop:
+      phone:  '30:15 center'
+      mobile: '3:1 center'
+      laptop: '35:10 center'
+      laptop: '35:10 center'
+    format_quality:
+      jpg: 
+        2000: 50
+        320: 30
+      png: 
+        2000: 45
+        320: 35
+      webp: 
+        2000: 45
+        320: 20
+    sizes:
+      desktop: 1920px
+      laptop: 1440px
+      tablet: 900px
+      mobile: 500px
+      phone: 320px
+    link_source: false
+    strip_metadata: true
+
+    attributes:
+      img: 'class="hero_banner"'
