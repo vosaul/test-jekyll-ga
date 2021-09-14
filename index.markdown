@@ -4,4 +4,6 @@
 
 layout: home
 ---
-# WOW!!! I'ts works!
+# WOW!!! It works!
+
+![Svydovets](assets/images/a1.jpg)
