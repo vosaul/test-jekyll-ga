@@ -22,6 +22,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install libvips-tools
+          sudo apt-get install rename
           gem install bundler
           bundle install
 
