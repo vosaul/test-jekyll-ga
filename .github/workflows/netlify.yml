@@ -23,11 +23,12 @@ jobs:
           sudo apt-get update
           sudo apt-get install libvips-tools
           sudo apt-get install rename
+          rename -V
           gem install bundler
           bundle install
 
       - name: Create Build
-        run: bundle exec jekyll build -d docs && rename --help
+        run: bundle exec jekyll build -d docs
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
