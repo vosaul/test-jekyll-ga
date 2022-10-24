@@ -26,7 +26,7 @@ jobs:
           bundle install
 
       - name: Create Build
-        run: rename --version && bundle exec jekyll build -d docs
+        run: bundle exec jekyll build -d docs && rename --help
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v1
