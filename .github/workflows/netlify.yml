@@ -65,4 +65,5 @@ jobs:
             git add docs
             git commit -m "gh-actions deployed a new website build"
             git push --force https://$@github.com/${GITHUB_REPOSITORY}.git HEAD:website-build
+            find ./ -mindepth 1 -maxdepth 1 -type d -not -name public -exec rm -rf '{}' \;
           fi
